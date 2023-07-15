@@ -51,8 +51,8 @@ def sendEmail(to,content):
     server = smtplib.SMTP('smpt.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('supriyaa8625@gmail.com','ansh8625')
-    server.sendmail('supriyaa8625@gmail.com',to,content)
+    server.login('abc@gmail.com','')  #here you need to metion your email and password which you  use for emailing
+    server.sendmail('abc@gmail.com',to,content)
     server.close()
 
 if __name__ == '__main__':
@@ -103,7 +103,7 @@ if __name__ == '__main__':
             try:
                 speak("what should i send?")
                 content =takecommand()
-                to = "supriya_singh_bca@jimsindia.org"
+                to = "abcd@gmail.com"   #mention the mail id of those person whose you want to send the email
                 sendEmail(to,content)
                 speak("your email has been send")
             except Exception as e:
